@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee</title>
+    <style>
+      body {
+        min-height: 100%;
+        background: linear-gradient(#48bbe9, #306e86, #112730);
+        font-family: Arial, Helvetica, sans-serif;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      h1 {
+        text-align: center;
+        margin: 20px 0 0 0;
+        line-height: 1.2;
+        font-size: 40px;
+      }
+      h2 {
+        text-align: center;
+        margin: 0;
+        font-weight: 100;
+      }
+      img {
+        display: block;
+        margin: 20px auto;
+        max-width: 750px;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      button {
+        background-color: #277b9c;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+        transition: all 150ms ease-in-out;
+        box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.3);
+      }
+
+      a {
+        color: #277b9c;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button:hover {
+        background-color: white;
+        border: 1px solid #277b9c;
+        color: #277b9c;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+      }
+      .coffeeDefinition {
+        line-height: 1.5;
+      }
+      .coffeeFacts {
+        text-align: center;
+      }
+      .signature {
+        text-align: center;
+        padding: 10px 0 0 0;
+      }
+      .container {
+        max-width: 800px;
+        background-color: white;
+        display: block;
+        margin: 30px auto;
+        border-radius: 10px;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Coffee</h1>
+      <h2>
+        The <em>only</em> way to start the day
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/041/233/original/coffeepic.png?1658450501"
+        />
+      </h2>
+      <span class="coffeeDefinition">
+        <strong>Coffee</strong> is a brewed drink prepared from roasted coffee
+        beans, the seeds of berries from certain flowering plants in the Coffea
+        genus. From the coffee fruit, the seeds are separated to produce a
+        stable, raw product: unroasted green coffee. The seeds are then roasted,
+        a process which transforms them into a consumable product: roasted
+        coffee, which is ground into fine particles that are typically steeped
+        in hot water before being filtered out, producing a cup of coffee.
+      </span>
+      <hr />
+      <p class="coffeeFacts">
+        Would you like to read some fun facts about coffee?
+      </p>
+      <button class="yesButton">Yes!</button><br />
+      
+      </p>
+      <hr />
+      <p class="signature">
+        Coded by
+        <a
+          href="https://www.linkedin.com/in/callie-stoscup-475b1683/"
+          target="_blank"
+          >Callie Stoscup</a
+        > <br><br> 
+        <button class="contact">Join Our Team</button>
+      </p>
+    </div>
+    <script>
+      let factNumber = 0;
+
+      function selectFact() {
+        factNumber = factNumber + 1;
+        console.log(factNumber);
+        if (factNumber === 1) {
+          let paragraph = document.querySelector(".coffeeFacts");
+          paragraph.innerHTML =
+            "<strong>Fun Fact #1</strong><br><br>The Netherlands consume the most coffee.<br><br>According to a 2020 study, the Netherlands were said to consume the most coffee per capita with a whopping 8.3 kilograms.";
+          let buttonName = document.querySelector(".yesButton");
+          buttonName.innerHTML = "Next";
+        }
+        if (factNumber === 2) {
+          let paragraph = document.querySelector(".coffeeFacts");
+          paragraph.innerHTML =
+            "<strong>Fun Fact #2</strong><br><br>Coffee helps you live longer.<br><br>Thanks to it being jam-packed with antioxidants, coffee remains one of the healthiest beverages in the world.<br><br>Of course, if you choose to add cream, sugar or syrup then this health factor may be impacted, but otherwise, when consumed as part of a healthy balanced diet and lifestyle, coffee can help people to live longer, happier lives.";
+        }
+        if (factNumber === 3) {
+          let paragraph = document.querySelector(".coffeeFacts");
+          paragraph.innerHTML =
+            "<strong>Fun Fact #3</strong><br><br>The world's largest cup of coffee was over 20,000 litres.<br><br>As of 15th June 2019, the largest cup of coffee ever made contained a whopping 22,739.14 litres and was recorded in the Guinness Book of World Records.<br><br>The cup was created by Alcaldía Municipal de Chinchiná (Colombia) at Parque de Bolívar, Chinchiná, Caldas, Colombia and took over a month with fifty people working on the project.";
+        }
+        if (factNumber === 4) {
+          let paragraph = document.querySelector(".coffeeFacts");
+          paragraph.innerHTML =
+            "<strong>Fun Fact #4</strong><br><br>People have tried to ban coffee.<br><br>In its early years, there were plenty of different groups across the world that tried to ban our favourite beverage.<br><br>Typically, it was because of coffee’s stimulating effect or the particular crowd it attracted. Coffee Houses fast became a spot for free thinkers to discuss their ideas. One particular instance was in Mecca all the way back in 1511 where the governor feared coffee might unite his opposition.";
+        }
+        if (factNumber === 5) {
+          let paragraph = document.querySelector(".coffeeFacts");
+          paragraph.innerHTML =
+            "<strong>Fun Fact #5</strong><br><br>Coffee was discovered by a goat herder.<br><br>All the way back in the 1500s, it was said that a goat herder in Ethiopia discovered coffee after observing strange behaviour in his goats.<br><br>He noticed that after they ate coffee cherries, they suddenly had a lot of energy and were unable to sleep at night. He shared his findings with local monks who made their own drinks from the coffee beans and the rest, as they say, is history.";
+          factNumber = 0;
+          let buttonName = document.querySelector(".yesButton");
+          buttonName.innerHTML = "Start Again";
+        }
+      }
+
+      function contactUs() {
+        let cupsCoffee = prompt("How many cups of coffee do you drink a day?")
+        if (cupsCoffee >=3) {
+            alert("You'll fit in great here! We love coffee!")
+        } else {
+            alert("I'm sorry, you have to love coffee to join our team.")
+        }
+      }
+
+      let nextButton = document.querySelector(".yesButton");
+      nextButton.addEventListener("click", selectFact);
+      
+      let contactButton = document.querySelector(".contact");
+      contactButton.addEventListener("click", contactUs);
+    </script>
+  </body>
+</html>
